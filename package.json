@@ -1,0 +1,8 @@
+{
+  "name": "live",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/magicapple/live.git",
+  "author": "xiaoxiaozhanglin <xiaoxiaozhanglin@126.com>",
+  "license": "MIT"
+}
