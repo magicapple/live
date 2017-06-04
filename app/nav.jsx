@@ -14,7 +14,7 @@ class Nav extends React.Component {
   render() {
     return (
       <div className='nav'>
-
+          {this.props.name}
       </div>
     )
   }

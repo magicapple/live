@@ -23,7 +23,8 @@ class Navs extends React.Component {
     var panel = [];
     React.Children.forEach(this.state.children, function (children, index) {
         const props = {
-            name: children.props.name
+            name: children.props.name,
+            key: index
         };
         tab.push (<Nav {...props} />);
         panel.push(children);

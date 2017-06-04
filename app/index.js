@@ -8,17 +8,22 @@ import App from './navs.jsx';
 import Pannel from './pannel.jsx';
 import List from './list.jsx';
 
-
+// if不能放在jsx中，只能用表达式来做。
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
       <Component name="title">
-        <Pannel name="tab1" >
-          <List/>
-        </Pannel>
-        <Pannel name="tab2" />
-        <Pannel name="tab3" />
-        <Pannel name="tab4" />
+        {false ?
+          <Pannel key="1" name="tab1" >
+            <List/>
+          </Pannel>
+          :
+          <Pannel key="1" name="tab1" >
+          </Pannel>          
+        }
+        <Pannel key="2" name="tab2" >panel2</Pannel>
+        <Pannel key="3" name="tab3" >panel3</Pannel>
+        <Pannel key="4" name="tab4" >panel4</Pannel>
       </Component>
     </AppContainer>,
     document.getElementById('root')
