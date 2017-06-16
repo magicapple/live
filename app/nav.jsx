@@ -1,4 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Div = styled.div`
+  background: #ccc;
+  display: inline-block;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  &:hover {
+    background: #ff0;
+    color: #f00;
+  }
+`
+
 
 class Nav extends React.Component {
 
@@ -12,10 +27,11 @@ class Nav extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return (
-      <div className='nav'>
+      <Div {...this.props} >
           {this.props.name}
-      </div>
+      </Div>
     )
   }
 }

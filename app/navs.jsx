@@ -22,11 +22,15 @@ class Navs extends React.Component {
     var tab = [];
     var panel = [];
     React.Children.forEach(this.state.children, function (children, index) {
+        console.log(children.props);
         const props = {
             name: children.props.name,
+            active: children.props['data-active'] || "false",
             key: index
         };
-        tab.push (<Nav {...props} />);
+        console.log('-------');
+        console.log(props);
+        tab.push (<Nav {...children.props} />);
         panel.push(children);
         console.log(children, index);
     });

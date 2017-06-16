@@ -21,7 +21,7 @@ const render = (Component) => {
           <Pannel key="1" name="tab1" >
           </Pannel>          
         }
-        <Pannel key="2" name="tab2" >panel2</Pannel>
+        <Pannel key="2" name="tab2" title="aaa">panel2</Pannel>
         <Pannel key="3" name="tab3" >panel3</Pannel>
         <Pannel key="4" name="tab4" >panel4</Pannel>
       </Component>
